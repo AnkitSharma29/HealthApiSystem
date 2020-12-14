@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {{>headerlinks}}
+</head>
+
+<body>
+ {{>navbar}}
+
+  <!-- main header  -->
+  
+    <div class="container my-3">
+        <form action="update" method="POST">
+            <h1 class="text-center"> Update Us </h1>
+            <input type="hidden" name="_id" value="{{register._id}}">
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">username</label>
+                <input type="text" class="form-control" name="username" value="{{register.username}}" id="exampleFormControlInput1"
+                    placeholder="Enter your Username">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" value="{{register.email}}" id="exampleFormControlInput1"
+                    placeholder="Enter your first name">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Choose a password</label>
+                <input type="password" class="form-control" name="password" value="{{register.password}}" id="exampleFormControlInput1" placeholder="Choose a password">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Retype a password</label>
+                <input type="password" class="form-control" name="confirmPassword" value="{{register.confirmPassword}}"  id="exampleFormControlInput1" placeholder="Retype a password">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Phone Number(with country code)</label>
+                <input type="number" class="form-control" name="phone" value="{{register.phone}}" id="exampleFormControlInput1"
+                    placeholder="enter your phone Number">
+            </div>
+            {{!-- <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">message</label>
+                <input type="text" class="form-control" name="username" value="{{register.message}}" id="exampleFormControlInput1"
+                    placeholder="Enter your Username">
+            </div> --}}
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Message</label>
+                <textarea class="form-control is-invalid" name="message" value="{{register.message}}" id="validationTextarea"
+                    placeholder="Required example textarea" ></textarea>
+            </div>
+
+            <div class="invalid-feedback">
+                You must agree before submitting.
+            </div>
+
+
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Update form</button>
+            </div>
+
+        </form>
+    </div>
+
+
+
+{{>footer}}
+</body>
+
+</html>

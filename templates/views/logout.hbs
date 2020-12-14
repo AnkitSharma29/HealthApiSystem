@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{>headerlinks}}
+{{error}}
+</head>
+
+<body>
+{{>navbar}}
+<div class="container-fluid main_header">
+    <div class="container my-4">
+            <div class="jumbotron">
+                <h1 class="display-4">Delete Account </h1>
+                <p class="lead">Click to Log out</p>
+                <hr class="my-4">
+                <p>This is a all the data and information Delete.
+                </p>
+                <a class="btn btn-success btn-lg" href="/delete/{{DeleteAccount}}" role="button">Delete Account</a>
+            </div>
+
+            <div class="jumbotron">
+                <h1 class="display-4">Log out All The Device </h1>
+                <p class="lead">Click to Log out</p>
+                <hr class="my-4">
+                <p style="font-size: 1.9rem;color: #e02121;">This is {{Loginusersize}} Login user.
+                </p>
+                <a class="btn btn-success btn-lg" href="/logoutmul" role="button">Logout All Device</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="container my-4">
+            <div class="jumbotron">
+                <h1 class="display-4">Log out One Device</h1>
+                <p class="lead">Click to Log out</p>
+                <hr class="my-4">
+                <p>This is peer to peer Forum. No Spam / Advertising / Self-promote in
+                    the forums is not allowed.Do not post copyright-infringing material.
+                    Do not post “offensive” posts, links or images.
+                    Do not cross post questions.Remain respectful of other members at all times.
+                </p>
+                <a class="btn btn-success btn-lg" href="/logoutsingle" role="button">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{>footer}}
+
+</body>
+
+</html>
+    

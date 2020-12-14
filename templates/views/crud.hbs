@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {{>headerlinks}}
+</head>
+
+<body>
+    {{>navbar}}
+
+    <!-- main header  -->
+    <div class="container-fluid main_header my-5">
+        <div class="row">
+            <div class="col-md-11 col-12 mx-auto">
+                <h3><a class="btn btn-secondary" href="/contacts"><i class="fa fa-plus"></i> Create New</a> Data List
+                </h3>
+                <table class="table table-responsive table-striped">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>password</th>
+                            <th>cpassword</th>
+                            <th>phone</th>
+                            <th>message</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each list}}
+                        <tr>
+                            <td>{{this.username}}</td>
+                            <td>{{this.email}}</td>
+                            <td>{{this.password}}</td>
+                            <td>{{this.confirmPassword}}</td>
+                            <td>{{this.phone}}</td>
+                            <td>{{this.message}}</td>
+                            <td>
+                                <a href="/update/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                                <a href="/delete/{{this._id}}"
+                                    onclick="return confirm('Are you sure to delete this record ?');"><i
+                                        class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </div>
+    {{>footer}}
+</body>
+
+</html>
